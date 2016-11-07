@@ -1,0 +1,19 @@
+<html>
+	<head>
+	</head>
+
+	<body ng-app="MyApp">
+		<div ng-controller="MainController">
+			<b>dunia</b> dari parent scope </br>
+			<h2>Hello {{dunia}} </h2>
+			<hr/>
+			<b>dunia</b> dari directive scope </br>
+			<my-directive></my-directive>
+	</div>
+
+	<script src="script/angular.min.js"></script>
+	<script src="script/appdirective.js"></script>
+	<script src="controllers/MainController.js"></script>
+	<script src="directives/MyDirective.js"></script>
+	</body>
+<html>

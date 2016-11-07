@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using Angular Directive And Data Binding</title>
+</head>
+<body ng-app="FirstApp">
+	<h3>Use Binding</h3>
+	Type Here : <br>
+	<input type="text" ng-model="name">
+	<p>{{ name }}</p>
+
+	<!-- Using Looping -->
+	<div class="container"
+		ng-init="names=['Ocid','Luthfi','Riz']">
+
+		<h3>Looping With the ng-repeat Directive</h3>
+		<ul>
+			<li ng-repeat="name in names">{{ name }}</li>
+		</ul>
+	</div> <br>
+
+	<!-- Using Filter -->
+	<div class="container"
+		ng-init="customers=[{name:'Ocid',city:'Bogor'}, {name:'Teman', city:'Jakarta'}, {name:'Ocid',city:'Angkasa'}]">
+
+		<h3>Using Filter</h3>
+		Filter : <br>
+		<input type="text" ng-model="name2">
+		<ul>
+			<li ng-repeat="cust in customers | filter:name2 | orderBy:'city'">{{ cust.name | uppercase }} - {{ cust.city | lowercase }}</li>
+		</ul>
+	</div> <br>
+
+	<!-- Using Contoller -->
+	
+	<div class="container" ng-controller="MainController">
+		<h3>Adding a Simple Controller</h3>
+		<ul>
+			<li ng-repeat="cust in customers">{{cust.name}} - {{cust.city}}</li>
+		</ul>
+	</div>
+
+		<script src="script/angular.min.js"></script>
+		<script src="script/app.js"></script>
+		<script src="controllers/MainController.js"></script>
+
+</body>
+</html>

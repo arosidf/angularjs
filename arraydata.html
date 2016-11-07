@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Belajar AngularJs</title>
+	</head>
+	<body ng-app="FirstApp">
+
+		<div ng-controller="MainController">
+
+			<!-- Array Data , ng-Click -->
+			<div ng-repeat="list in lists">
+				{{list.title}} <br>
+				{{list.author}} <br>
+				{{list.price | rupiah}} <br>
+				{{list.pubdate | date}} <br>
+				{{list.likes}} <button ng-click="logToConsole($index)">Log</button>
+				<button ng-click="likes($index)">Like</button> </br>
+				<hr>
+			</div>
+
+		</div> 
+
+		<a href="index.html">Single and Filter Data</a> || 
+		<a href="senddatafromviewtocontroller.html">Send Data From View To Controller</a>
+
+		<script src="script/angular.min.js"></script>
+		<script src="script/app.js"></script>
+		<script src="controllers/MainController.js"></script>
+	</body>
+</html>

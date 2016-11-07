@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Belajar AngularJs</title>
+	</head>
+	<body ng-app="FirstApp">
+
+		<div ng-controller="MainController">
+			<!-- Single Data , Filter Data -->
+			{{ title }} <br>
+			{{book.title}} <br>
+			{{book.author}} <br>
+			{{book.price | currency}} / {{book.price | rupiah}} <br>
+			{{book. pubdate | date }} <br> <br> <br>
+
+		</div> 
+
+		<a href="arraydata.html">Array Data, ng-click</a> || 
+		<a href="senddatafromviewtocontroller.html">Send Data From View To Controller</a>
+
+		<script src="script/angular.min.js"></script>
+		<script src="script/app.js"></script>
+		<script src="controllers/MainController.js"></script>
+	</body>
+</html>

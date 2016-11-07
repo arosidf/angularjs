@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Belajar AngularJs</title>
+	</head>
+	<body ng-app="FirstApp">
+
+		<div ng-controller="MainController">
+
+			<a href="arraydata.html"></a>
+			<a href="index.html"></a>
+
+			<!-- Send data from View to Controller -->
+			Title : <input type="text" ng-model="title"/> </br>
+			{{title}} </br>
+			<button ng-click="log()">Log</button>
+
+		</div>
+
+		<a href="arraydata.html">Array Data, ng-click</a> || 
+		<a href="index.html">Single and Filter Data</a> 
+
+		<script src="script/angular.min.js"></script>
+		<script src="script/app.js"></script>
+		<script src="controllers/MainController.js"></script>
+	</body>
+</html>
